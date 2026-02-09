@@ -29,3 +29,8 @@ pytest-cov>=4.1.0
 black>=23.12.0
 ruff>=0.1.8
 mypy>=1.7.1
+
+# Phase III - AI Chatbot Dependencies
+google-genai>=0.8.6  # Gemini Flash 2.5 SDK (new unified API)
+httpx>=0.25.2  # MCP client (already included in testing, but required for runtime)
+mcp>=1.0.0  # Model Context Protocol Python SDK for MCP server

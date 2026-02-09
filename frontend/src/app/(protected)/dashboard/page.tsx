@@ -6,9 +6,8 @@
  */
 
 import { useEffect, useState, useCallback } from "react";
-import { getCurrentUser } from "@/lib/auth";
+import { getCurrentUser, User } from "@/lib/auth";
 import { apiRequest, ApiException } from "@/lib/api";
-import type { User } from "@/types/user";
 import type { Task, TaskCreateRequest, TaskUpdateRequest } from "@/types/task";
 import { Priority } from "@/types/task";
 import TaskForm from "@/components/tasks/TaskForm";

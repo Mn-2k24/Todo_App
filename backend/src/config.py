@@ -76,6 +76,14 @@ class Settings(BaseSettings):
         json_schema_extra={"env": "DEBUG"},
     )
 
+    # Phase III: Gemini API Configuration
+    gemini_api_key: str = Field(
+        ...,
+        min_length=1,
+        description="Google Gemini API key for Phase III AI chatbot",
+        json_schema_extra={"env": "GEMINI_API_KEY"},
+    )
+
     @field_validator("database_url")
     @classmethod
     def validate_database_url(cls, v: str) -> str:
