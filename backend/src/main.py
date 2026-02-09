@@ -101,6 +101,7 @@ async def root() -> dict:
 
 # Register API routers
 from src.api import auth, tasks
+from phase3.routers import chat
 
 app.include_router(
     auth.router,
@@ -112,4 +113,10 @@ app.include_router(
     tasks.router,
     prefix="/api/tasks",
     tags=["Tasks"],
+)
+
+# Phase III: Chat API (AI-powered natural language interface)
+app.include_router(
+    chat.router,
+    tags=["Chat"],
 )

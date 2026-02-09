@@ -38,6 +38,10 @@ if config.config_file_name is not None:
 from src.models.user import User  # noqa: F401
 from src.models.task import Task  # noqa: F401
 
+# Phase III models
+from phase3.models.conversation import Conversation  # noqa: F401
+from phase3.models.message import Message  # noqa: F401
+
 # Add your model's MetaData object here for 'autogenerate' support
 target_metadata = SQLModel.metadata
 
